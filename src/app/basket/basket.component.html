@@ -1,0 +1,117 @@
+<div class="container">
+    <h1>{{title}}</h1>
+    <div class="row">
+        <div class="col-8"  *ngIf="!loadedConfig">
+            <div class="col-12 text-center"><img src="/assets/images/seuaOqf.gif" /></div>
+        </div>
+        <div class="col-8" *ngIf="loadedConfig">
+            <div class="container">
+                <div class="row">
+                    <div class="col-12 border p-2">
+                        <h4>Choose a plan</h4>
+                    </div>
+                </div>
+                <div class="row">
+                    <div *ngFor="let plan of subPlans" class="col-4 border p-3">
+                        <h4 class="border-bottom pb-2">{{plan.name}}</h4>
+                        <p>{{plan.description}}</p>
+                        <p class="large"><span>{{plan.currency_symbol}}{{plan.prices.gross}}</span>&nbsp;/&nbsp;monthly</p>
+                        <button class="webex-button" value="Buy Now" (click)="addSubToArray(plan)" [disabled]="selectedPlan">Buy Now</button>
+                    </div>
+                </div>
+                <div class="row mt-4">
+                    <div class="col-12 border p-2">
+                        <h4>Add Call Me</h4>
+                        <p>People receive a call wherever they are and they're in! No dialling, no passcodes. Or offer a freephone number to join.</p>
+                    </div>
+                </div>
+                <div class="row">
+                    <div *ngFor="let prod of products" class="col-4 border p-3">
+                        <h4 class="border-bottom pb-2">{{prod.name}} minutes</h4>
+                        <p class="large"><span>{{prod.currency_symbol}}{{prod.prices.gross}}</span>&nbsp;/&nbsp;monthly</p>
+                        <button class="webex-button" (click)="addCallMeItem(prod)" value="Buy Now">Add Now</button>
+                    </div>
+                </div>
+                <div class="row mt-4">
+                    <div class="col-12 border p-2">
+                        <h4>Add International Minutes</h4>
+                        <p>These will only count toward your first bill. Extra minutes can always be added from your account page.</p>
+                    </div>
+                </div>
+                <div class="row">
+                    <div *ngFor="let mins of intPlans" class="col-4 border p-3">
+                        <h4 class="border-bottom pb-2">{{mins.name}} minutes</h4>
+                        <p class="large"><span>{{mins.currency_symbol}}{{mins.prices.gross}}</span></p>
+                        <button class="webex-button" (click)="addIntMins(mins)" value="Buy Now">Add Now</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="col-4 border">
+            <div class="container">
+                <div class="row">
+                    <div class="col-12 p-2">
+                        <h4 class="border-bottom pb-3">Order summary</h4>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-12 p-2 pb-0">
+                        <p class="large"><span class="border-bottom pr-5 pb-2 pb-0">Plan</span></p>
+                        <div *ngIf="selectedPlan">
+                            <p>
+                                {{selectedPlan.name}} x 1 host<button type="button" class="close" aria-label="Close" (click)="removeSelectedPlan()">
+                                        <span aria-hidden="true">&times;</span>
+                                      </button><br />
+                                Cost: {{selectedPlan.currency_symbol}}{{selectedPlan.prices.gross}}<br />
+                            </p>
+                        </div>
+                    </div>
+                </div>
+                <div *ngIf="selectedCallMe.length > 0" class="row">
+                    <div class="col-12 p-2 pb-0">
+                        <p class="large"><span class="border-bottom pr-5 pb-2 pb-0">Call Me</span></p>
+                        <div *ngFor="let callMe of selectedCallMe">
+                            <p>
+                                {{callMe.name}} minutes<button type="button" class="close" aria-label="Close" (click)="removeCallMeItem(callMe)">
+                                        <span aria-hidden="true">&times;</span>
+                                        </button><br />
+                                Cost: {{callMe.currency_symbol}}{{callMe.prices.gross}}<br />
+                            </p>
+                        </div>
+                    </div>
+                </div>
+                <div *ngIf="selectedIntMins.length > 0" class="row">
+                    <div class="col-12 p-2 pb-0">
+                        <p class="large"><span class="border-bottom pr-5 pb-2 pb-0">International Minutes</span></p>
+                        <div *ngFor="let intMin of selectedIntMins">
+                            <p>
+                                {{intMin.name}} minutes<button type="button" class="close" aria-label="Close" (click)="removeIntMins(intMin)">
+                                        <span aria-hidden="true">&times;</span>
+                                        </button><br />
+                                Cost: {{intMin.currency_symbol}}{{intMin.prices.gross}}<br />
+                            </p>
+                        </div>
+                    </div>
+                </div>
+                <div *ngIf="pricingTotal.gross > 0 && selectedPlan" class="row">
+                    <div class="col-12 p-2">
+                        <h4 class="large border-bottom pb-2">Total</h4>
+                        <div *ngIf="selectedIntMins.length > 0">
+                            <p class="large pb-0 mb-0">You pay today:</p>
+                            <p>
+                                Total: {{pricingTotal.currency_symbol}}{{pricingTotal.onetime.gross | number}}
+                            </p>
+                        </div>
+                        <div>
+                            <p class="large pb-0 mb-0">Your monthly payment:</p>
+                            <p>
+                                Total: {{pricingTotal.currency_symbol}}{{pricingTotal.gross | number}}
+                            </p>
+                        </div>
+                        <button class="webex-button" (click)="myCheckout()" value="Checkout">Checkout</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

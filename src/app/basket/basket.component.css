@@ -1,0 +1,24 @@
+.webex-button {
+    background-color: #3BC715;
+    border-radius: 5px;
+    padding: 10px 17px;
+    color: #fff;
+    font-family: 'CiscoSansRegular', Arial, Helvetica, sans-serif;
+    font-size: 16px;
+    line-height: 18px;
+    cursor: pointer;
+}
+.webex-button:hover {
+    background-color: #33B611;
+}
+.webex-button:disabled {
+    background-color: grey;
+    cursor: default;
+}
+p {
+    font-size: 15px;
+}
+p.large {
+    font-size: 18px;
+    font-weight: bold;
+}

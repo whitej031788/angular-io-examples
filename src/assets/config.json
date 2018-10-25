@@ -1,0 +1,47 @@
+{
+    "subscription_plans": [
+        {
+            "id": 543000, 
+            "name": "Premium 8",
+            "description": "Up to 8 people per meeting"
+        },
+        {
+            "id": 543001, 
+            "name": "Premium 25",
+            "description": "Up to 25 people per meeting"
+        },
+        {
+            "id": 543002, 
+            "name": "Premium 100",
+            "description": "Up to 100 people per meeting"
+        }
+    ],
+    "add_ons": [
+        {
+            "id": 543027, 
+            "name": "500"
+        },
+        {
+            "id": 543029, 
+            "name": "1500"
+        },
+        {
+            "id": 543030, 
+            "name": "2500"
+        }
+    ],
+    "int_mins": [
+        {
+            "id": 543032, 
+            "name": "100"
+        },
+        {
+            "id": 543033, 
+            "name": "200"
+        },
+        {
+            "id": 543034, 
+            "name": "300"
+        }
+    ]
+}
