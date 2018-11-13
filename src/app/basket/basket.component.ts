@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { BasketService } from './basket.service';
+
 // Below is the Paddle global object from the Paddle CDN
 declare var Paddle : any;
 
