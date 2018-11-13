@@ -10,6 +10,7 @@ import { HeroDetailComponent } from './heroes/hero-detail/hero-detail.component'
 import { BasketComponent } from './basket/basket.component';
 import { HomeComponent } from './home/home.component';
 import { HeaderComponent } from './shared/header/header.component';
+import { VolumeComponent } from './volume/volume.component';
 
 @NgModule({
   declarations: [
@@ -18,7 +19,8 @@ import { HeaderComponent } from './shared/header/header.component';
     HeroDetailComponent,
     BasketComponent,
     HomeComponent,
-    HeaderComponent
+    HeaderComponent,
+    VolumeComponent
   ],
   imports: [
     BrowserModule,

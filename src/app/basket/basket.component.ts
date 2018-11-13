@@ -9,6 +9,7 @@ declare var Paddle : any;
     templateUrl: './basket.component.html',
     styleUrls: ['./basket.component.css']
 })
+
 export class BasketComponent implements OnInit {
 
     constructor(private basketService: BasketService) {}

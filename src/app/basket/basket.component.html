@@ -5,6 +5,7 @@
             <div class="col-12 text-center"><img src="/assets/images/seuaOqf.gif" /></div>
         </div>
         <div class="col-8" *ngIf="loadedConfig">
+            <p>This is an example of using Paddle's custom checkout API to allow a variable subscription plan checkout with add-ons</p>
             <div class="container">
                 <div class="row">
                     <div class="col-12 border p-2">
@@ -41,17 +42,17 @@
                 <div class="row">
                     <div *ngFor="let mins of intPlans" class="col-4 border p-3">
                         <h4 class="border-bottom pb-2">{{mins.name}} minutes</h4>
-                        <p class="large"><span>{{mins.currency_symbol}}{{mins.prices.gross}}</span></p>
+                        <p class="large"><span>{{mins.currency_symbol}}{{mins.prices.gross}}&nbsp;/&nbsp;one time</span></p>
                         <button class="webex-button" (click)="addIntMins(mins)" value="Buy Now">Add Now</button>
                     </div>
                 </div>
             </div>
         </div>
-        <div class="col-4 border">
-            <div class="container">
+        <div class="col-4">
+            <div class="container border">
                 <div class="row">
-                    <div class="col-12 p-2">
-                        <h4 class="border-bottom pb-3">Order summary</h4>
+                    <div class="col-12 no-pad-side">
+                        <h4 class="border-bottom pb-3 rounded-header">Order summary</h4>
                     </div>
                 </div>
                 <div class="row">

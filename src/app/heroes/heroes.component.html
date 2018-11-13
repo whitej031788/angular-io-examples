@@ -1,4 +1,4 @@
-<h1>Tour of Heroes</h1>
+<app-header [title]="'Tour of Heroes'"></app-header>
 <h2>My Heroes</h2>
 <ul class="heroes">
   <li *ngFor="let hero of heroes" (click)="onSelect(hero)" [class.selected]="hero === selectedHero">
