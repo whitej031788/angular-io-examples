@@ -1,8 +1,8 @@
-<div class="container">
+<div class="container top-content">
     <app-header [title]="'Paddle Volume Pricing'"></app-header>
     <div class="row">
         <div class="col-12">
-            <p>This is an example of using Paddle's custom checkout API to manage volume discounts and pricing</p>
+            <p style="color:darkslategrey;">This is an example of using Paddle's custom checkout API to manage volume discounts and pricing</p>
         </div>
     </div>
     <div class="row">
@@ -36,8 +36,9 @@
                             <option val="15">15</option>
                         </select>
                     </div>
-                    <div class="col-2">
-                        <button class="btn btn-info" (click)="myCheckout(543057,myQuant)">Buy Now</button>
+                    <div class="col-2" style="text-align:center;">
+                        <p class="pb-0 mb-1">£25<br />(vat included)</p>
+                        <button class="btn btn-info" (click)="myCheckout(544910,myQuant)">Buy Now</button>
                     </div>
                 </div>
                 <div class="row product-row">
@@ -47,7 +48,7 @@
                     <div class="col-7">
                         <h6>Remote Buddy Small Site License 1.x (for Mac OS X, Download)</h6>
                         <p class="small-p">Multiuser license. Allows the usage of Remote Buddy on up to 50 Macs within an organisation.</p>
-                        <p class="vol-disc" data-toggle="modal" data-target="#volume2">Volume discounts</p>
+                        <!--<p class="vol-disc" data-toggle="modal" data-target="#volume2">Volume discounts</p>-->
                     </div>
                     <div class="col-1">
                         <select>
@@ -68,7 +69,8 @@
                             <option val="15">15</option>
                         </select>
                     </div>
-                    <div class="col-2">
+                    <div class="col-2" style="text-align:center;">
+                        <p class="pb-0 mb-1">£250<br />(vat included)</p>
                         <button class="btn btn-info">Buy Now</button>
                     </div>
                 </div>
@@ -79,7 +81,7 @@
                     <div class="col-7">
                         <h6>Remote Buddy Big Site License 1.x (for Mac OS X, Download)</h6>
                         <p class="small-p">Multiuser license. Allows the usage of Remote Buddy on up to 150 Macs within an organisation.</p>
-                        <p class="vol-disc" data-toggle="modal" data-target="#volume3">Volume discounts</p>
+                        <!--<p class="vol-disc" data-toggle="modal" data-target="#volume3">Volume discounts</p>-->
                     </div>
                     <div class="col-1">
                         <select>
@@ -100,7 +102,8 @@
                             <option val="15">15</option>
                         </select>
                     </div>
-                    <div class="col-2">
+                    <div class="col-2" style="text-align:center;">
+                        <p class="pb-0 mb-1">£400<br />(vat included)</p>
                         <button class="btn btn-info">Buy Now</button>
                     </div>
                 </div>

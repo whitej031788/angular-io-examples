@@ -11,6 +11,9 @@ h1 {
   }
   body {
     margin: 2em;
+    font-family: 'Lucida Grande', 'Lucida Sans Unicode', Verdana, Arial, Helvetica, sans-serif;
+    height: 100%;
+    width: 100%;
   }
   body, input[text], button {
     color: #888;

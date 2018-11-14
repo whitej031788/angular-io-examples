@@ -14,6 +14,9 @@ export class VolumeComponent implements OnInit {
   constructor(private volumeService: VolumeService) {}
 
   ngOnInit() {
+    Paddle.Setup({
+        vendor: 33958
+    });
   }
 
   myQuant = 1;

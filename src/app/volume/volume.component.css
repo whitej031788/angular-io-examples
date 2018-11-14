@@ -1,6 +1,9 @@
-body {
-    background-color: #f4f4f4;
-    font-family: 'Lucida Grande', 'Lucida Sans Unicode', Verdana, Arial, Helvetica, sans-serif;
+
+.top-content {
+    background-color: lightgrey;
+    width: 100%;
+    height: 100%;
+    padding: 20px !important;
 }
 .sell-box {
     padding: 10px 10px 10px 10px;
