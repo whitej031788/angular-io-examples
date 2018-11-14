@@ -28,9 +28,16 @@ export class VolumeComponent implements OnInit {
         prodId,
         quant
         ).subscribe((data: any) => {
-            Paddle.Checkout.open({
-                override: data.response.url
-            })
+            if (quant > 10) {
+                // UPSELL THE LARGER LICENSE
+                Paddle.Checkout.open({
+                    override: data.response.url
+                });
+            } else {
+                Paddle.Checkout.open({
+                    override: data.response.url
+                });
+            }
         });
     }
 }
